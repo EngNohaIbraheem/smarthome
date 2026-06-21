@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../forget_password/presentation/widgets/under_line_eleveted_button.dart';
-import '../../../signup/presentation/signup_screen.dart';
+import '../../../../../core/widgets/under_line_eleveted_button.dart';
 
 class SignUpTextButton extends StatelessWidget {
   const SignUpTextButton({super.key});
@@ -17,7 +16,7 @@ class SignUpTextButton extends StatelessWidget {
         UnderlineElevatedButton(
           text: 'Sign Up',
           onPressed: () {
-            Navigator.pushNamed(context, SignUpScreen.routeName);
+           // Navigator.pushNamed(context, SignUpScreen.routeName);
           },
         ),
       ],

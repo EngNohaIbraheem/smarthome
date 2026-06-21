@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:newfashionstore/core/network/cache/cache_helper.dart';
-import 'package:newfashionstore/core/network/failures.dart';
+
+import 'cache/cache_helper.dart';
 
 class ApiService {
   final Dio _authDio;

@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 
+
 class AppColors {
-  static const primary = Color(0xFF2F2F2F);
-  static const grey = Color(0xFF9E9E9E);
-  static const lightGrey = Color(0xFFF5F5F5);
-  static const green = Color(0xFF4CAF50);
+  static const primary = Color(0xffB8E93B);
+
+  static const secondary = Colors.white;
+
+  static const black = Colors.black;
+
+  static const textField = Color(0xffF2F2F2);
+
+  static const hint = Color(0xff6E6E6E);
+
+  static const overlay = Colors.black54;
 }

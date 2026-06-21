@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_text_styles.dart';
+import '../../../../core/constants/app_text_style.dart';
+
+
 
 class TitleText extends StatelessWidget {
   const TitleText({super.key});

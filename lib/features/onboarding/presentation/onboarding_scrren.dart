@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:newfashionstore/features/onboarding/presentation/widgets/onboarding_indecator.dart';
-import '../../auth/login/presentation/screens/login_screen.dart';
-import '../../home/presentation/screens/home_screen.dart';
+import 'package:smarthome/features/onboarding/presentation/widgets/title_text.dart';
 import 'widgets/onboarding_background.dart';
 import 'widgets/dark_overlay.dart';
 import 'widgets/get_started_button.dart';
 
 
-import 'package:flutter/material.dart';
-
-import '../../../../core/constants/app_assets.dart';
-import '../widgets/background_image.dart';
-import '../widgets/dark_overlay.dart';
-import '../widgets/get_started_button.dart';
-import '../widgets/title_text.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -21,9 +12,9 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Stack(
-        children: const [
+        children: [
 
           BackgroundImage(),
 

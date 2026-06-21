@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/app_assets.dart';
+import '../../../../core/constants/assets.app.dart';
+
 
 class BackgroundImage extends StatelessWidget {
   const BackgroundImage({super.key});

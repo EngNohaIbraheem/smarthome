@@ -33,8 +33,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_text_styles.dart';
+import '../../../../core/config/theme/app_color.dart';
+import '../../../../core/constants/app_text_style.dart';
+
 
 class GetStartedButton extends StatelessWidget {
   const GetStartedButton({super.key});

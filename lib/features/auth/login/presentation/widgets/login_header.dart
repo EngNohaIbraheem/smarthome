@@ -10,7 +10,9 @@ class LoginHeader extends StatelessWidget {
       children: [
         Text(
           'Log into',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 28,
+              color: Colors.white,
+              fontWeight: FontWeight.bold),
         ),
         Text(
           'your account',

@@ -12,7 +12,7 @@ class PrimaryButton extends StatelessWidget {
     this.backgroundColor = const Color(0xFF95C11F),
     this.textColor = Colors.white,
     this.height = 55,
-    this.borderRadius = 12,
+    this.borderRadius = 12, required String text,
   });
 
   final String title;

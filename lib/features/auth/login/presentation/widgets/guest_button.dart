@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GuestButton extends StatelessWidget {
-  const GuestButton({super.key});
+  const GuestButton({super.key, required String title, required Null Function() onPressed});
 
   @override
   Widget build(BuildContext context) {

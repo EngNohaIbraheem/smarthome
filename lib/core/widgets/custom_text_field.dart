@@ -21,7 +21,7 @@ class CustomTextField extends StatelessWidget {
     this.obscureText = false,
     this.readOnly = false,
     this.maxLines = 1,
-    this.textInputAction,
+    this.textInputAction, required String hint,
   });
 
   final TextEditingController? controller;

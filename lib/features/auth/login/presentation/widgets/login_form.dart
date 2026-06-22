@@ -40,7 +40,7 @@ class LoginForm extends StatelessWidget {
               }
 
               return null;
-            },
+            }, hint: '',
           ),
 
           const SizedBox(height: 20),
@@ -75,7 +75,7 @@ class LoginForm extends StatelessWidget {
                   }
 
                   return null;
-                },
+                }, hint: '',
               );
             },
           ),
@@ -103,7 +103,7 @@ class LoginForm extends StatelessWidget {
                 isLoading: state is LoginLoading,
                 onPressed: () {
                   context.read<LoginCubit>().login();
-                },
+                }, text: '',
               );
             },
           ),
@@ -117,7 +117,7 @@ class LoginForm extends StatelessWidget {
             textColor: Colors.black,
             onPressed: () {
               // TODO Navigate To Register Screen
-            },
+            }, text: '',
           ),
         ],
       ),

@@ -35,7 +35,11 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/config/theme/app_color.dart';
 import '../../../../core/constants/app_text_style.dart';
+import '../../../auth/login/presentation/screens/login_screen.dart';
 
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
 
 class GetStartedButton extends StatelessWidget {
   const GetStartedButton({super.key});
@@ -51,6 +55,7 @@ class GetStartedButton extends StatelessWidget {
         ),
         child: Container(
           height: 82,
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(.08),
             borderRadius: BorderRadius.circular(45),
@@ -60,9 +65,7 @@ class GetStartedButton extends StatelessWidget {
           ),
           child: Row(
             children: [
-
-              const SizedBox(width: 8),
-
+              /// Lock Circle
               Container(
                 width: 66,
                 height: 66,
@@ -76,22 +79,47 @@ class GetStartedButton extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(width: 24),
+              const SizedBox(width: 20),
 
-              const Expanded(
-                child: Text(
-                  "Get Started",
-                  style: AppTextStyles.button,
+              /// Button
+              Expanded(
+                child: SizedBox(
+                  height: 56,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        LoginScreen.routeName,
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
+                      backgroundColor: const Color(0xFF53B175),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Text(
+                      "Get Started",
+                      style: AppTextStyles.button.copyWith(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
                 ),
               ),
 
+              const SizedBox(width: 12),
+
+              /// Arrow
               const Icon(
                 Icons.keyboard_double_arrow_right,
                 color: Colors.white54,
                 size: 30,
               ),
 
-              const SizedBox(width: 20),
+              const SizedBox(width: 8),
             ],
           ),
         ),

@@ -13,11 +13,11 @@ class AppAssets {
   'assets/images/logo.png';
 
   /// Icons
-  static const String googleIcon =
-  'assets/icons/google.png';
+  static const String googleImage =
+  'assets/images/google.png';
 
-  static const String appleIcon =
-  'assets/icons/apple.png';
+  static const String facebookImage  =
+  'assets/images/facebook.png';
 
   static const String facebookIcon =
       'assets/icons/facebook.png';

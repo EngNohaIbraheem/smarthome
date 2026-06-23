@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/widgets/social_button.dart';
 import '../manager/login_cubit.dart';
 
 
@@ -32,37 +31,37 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => LoginCubit(),
-      child: Scaffold(
+      child: const Scaffold(
         resizeToAvoidBottomInset: true,
         body: LoginBackground(
           child: SafeArea(
             child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
+              physics: BouncingScrollPhysics(),
               keyboardDismissBehavior:
               ScrollViewKeyboardDismissBehavior.onDrag,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
+                padding: EdgeInsets.symmetric(
                   horizontal: 24,
                   vertical: 20,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const LoginHeader(),
+                    LoginHeader(),
 
-                    const SizedBox(height: 30),
+                    SizedBox(height: 30),
 
-                    const LoginForm(),
+                    LoginForm(),
 
-                    const SizedBox(height: 30),
+                    SizedBox(height: 30),
 
-                    SocialButton(title: '', icon: '', onPressed: () {  },),
+                    SocialSection(),
 
-                    const SizedBox(height: 35),
+                    SizedBox(height: 35),
 
-                    GuestButton(title: '', onPressed: () {  },),
+                    GuestButton(),
 
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),

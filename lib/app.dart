@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smarthome/features/onboarding/presentation/onboarding_scrren.dart';
 
 import 'core/config/router/app_router.dart';
+import 'features/auth/Signup/presentation/screens/signup_screen.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       onGenerateRoute: AppRouter.generateRoute,
-      initialRoute: OnboardingScreen.routeName,
+      initialRoute: SignupScreen.routeName,
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../features/address/screens/delivert_adress_screen.dart';
+import '../../../features/auth/Signup/presentation/screens/signup_screen.dart';
 import '../../../features/auth/change_password/presentation/screens/change_password.dart';
 
 import '../../../features/auth/login/presentation/screens/login_screen.dart';
@@ -19,8 +20,8 @@ abstract class AppRouter {
         return MaterialPageRoute(builder: (c) => const WelcomeScreen());
       case OnboardingScreen.routeName:
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
-     // case MainLayout.routeName:
-      //  return MaterialPageRoute(builder: (_) => const MainLayout());
+     case SignupScreen.routeName:
+       return MaterialPageRoute(builder: (_) => const SignupScreen());
     //  case SignUpScreen.routeName:
        // return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case LoginScreen.routeName:

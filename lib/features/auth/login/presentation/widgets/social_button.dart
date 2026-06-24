@@ -1,37 +1,44 @@
 import 'package:flutter/material.dart';
 
 class SocialButton extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  final VoidCallback onPressed;
-
   const SocialButton({
     super.key,
     required this.title,
-    required this.icon,
+    required this.imagePath,
     required this.onPressed,
   });
 
-  @override
-  Widget build(BuildContext context) {
-    return OutlinedButton.icon(
-      onPressed: onPressed,
-      icon: Icon(icon),
-      label: Text(title),
-    );
-  }
-}
-class SocialIcon extends StatelessWidget {
-  final IconData icon;
-
-  const SocialIcon({super.key, required this.icon});
+  final String title;
+  final String imagePath;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 25,
-      backgroundColor: Colors.grey.shade200,
-      child: Icon(icon, size: 28, color: Colors.black),
+    return SizedBox(
+      width: double.infinity,
+      height: 56,
+      child: OutlinedButton(
+        onPressed: onPressed,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              imagePath,
+              width: 24,
+              height: 24,
+            ),
+            const SizedBox(width: 12),
+            Text(
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 42,
+                ),
+
+                title),
+          ],
+        ),
+      ),
     );
   }
 }

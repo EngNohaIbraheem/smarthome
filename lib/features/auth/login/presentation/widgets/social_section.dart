@@ -15,16 +15,20 @@ class SocialSection extends StatelessWidget {
         const DividerText(text: 'OR'),
 
         const SizedBox(height: 24),
-
-
-        const SizedBox(height: 16),
-
         SocialButton(
           title: 'Sign Up with Apple',
-          icon: AppAssets.facebookImage,
-          onPressed: () {
-            // TODO Apple Login
-          },
+          onPressed: () {}, icon: '', imagePath: '',
+        ),
+        SocialButton(
+          title: 'Continue with Google',
+          imagePath: 'assets/images/google.png',
+          onPressed: () {}, icon: '',
+        ),
+        const SizedBox(height: 16),
+        SocialButton(
+          title: 'Sign Up with Google',
+          onPressed: () {}, icon: ''
+            '', imagePath: '',
         ),
       ],
     );

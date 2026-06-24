@@ -96,20 +96,14 @@ class SignupForm extends StatelessWidget {
 
           const SizedBox(height: 28),
 
-          SocialButton(
-            title: "Sign Up with Google",
-            icon: "assets/icons/google.png",
-            onPressed: () {},
-          ),
 
           const SizedBox(height: 18),
 
           SocialButton(
-            title: "Sign Up with Apple",
-            icon: "assets/icons/apple.png",
-            onPressed: () {},
+            title: 'Continue with Google',
+            imagePath: 'assets/images/google.png',
+            onPressed: () {}, icon: '',
           ),
-
           const SizedBox(height: 40),
 
           GuestButton(

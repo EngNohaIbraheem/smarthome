@@ -5,7 +5,7 @@ class SocialButton extends StatelessWidget {
     super.key,
     required this.title,
     required this.icon,
-    required this.onPressed,
+    required this.onPressed, required String imagePath,
   });
 
   final String title;

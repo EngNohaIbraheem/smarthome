@@ -95,7 +95,7 @@ class RoomCard extends StatelessWidget {
                       const SizedBox(height: 4),
 
                       Text(
-                        room.devices,
+                        room.devices as String,
                         style: const TextStyle(
                           color: Colors.white70,
                         ),

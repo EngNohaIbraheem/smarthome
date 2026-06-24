@@ -4,32 +4,31 @@ import 'electricty_cost_card.dart';
 import 'electricty_usage_card.dart';
 import 'temperature_card.dart';
 
+
 class WeatherCard extends StatelessWidget {
   const WeatherCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 170,
+      height: 260, // زيادة الارتفاع
       child: Row(
-        children: const [
-
-          Expanded(
+        children: [
+          const Expanded(
             flex: 2,
             child: TemperatureCard(),
           ),
 
-          SizedBox(width: 10),
+          const SizedBox(width: 12),
 
           Expanded(
             child: Column(
-              children: [
-
+              children: const [
                 Expanded(
                   child: ElectricityUsageCard(),
                 ),
 
-                SizedBox(height: 10),
+                SizedBox(height: 12),
 
                 Expanded(
                   child: ElectricityCostCard(),

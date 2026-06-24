@@ -1,49 +1,49 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/widgets/custum_switch.dart';
-import '../models/sence_model.dart';
-
-import 'package:flutter/material.dart';
-
-
-
 class SceneItem extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  final bool value;
+  final ValueChanged<bool> onChanged;
+
   const SceneItem({
     super.key,
-    required this.scene,
-    required this.onChanged, required bool value, required String title, required IconData icon,
+    required this.title,
+    required this.icon,
+    required this.value,
+    required this.onChanged,
   });
-
-  final SceneModel scene;
-  final ValueChanged<bool> onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 82,
+      height: 72,
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
-        color: const Color(0xff232C39),
-        borderRadius: BorderRadius.circular(18),
+        color: const Color(0xff1D2229),
+        borderRadius: BorderRadius.circular(14),
       ),
       child: Row(
         children: [
+
           Container(
-            width: 48,
-            height: 48,
+            width: 42,
+            height: 42,
             decoration: const BoxDecoration(
-              color: Color(0xff2E3746),
+              color: Color(0xff2D3239),
               shape: BoxShape.circle,
             ),
             child: Icon(
-              scene.icon,
-              color: const Color(0xffB7F23A),
+              icon,
+              color: const Color(0xffB9F531),
             ),
           ),
+
           const SizedBox(width: 16),
+
           Expanded(
             child: Text(
-              scene.title,
+              title,
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 18,
@@ -51,9 +51,17 @@ class SceneItem extends StatelessWidget {
               ),
             ),
           ),
-          CustomSwitch(
-            value: scene.isActive,
-            onChanged: onChanged,
+
+          Transform.scale(
+            scale: .9,
+            child: Switch(
+              value: value,
+              activeColor: Colors.white,
+              activeTrackColor: Colors.black,
+              inactiveThumbColor: Colors.white,
+              inactiveTrackColor: Colors.black,
+              onChanged: onChanged,
+            ),
           ),
         ],
       ),

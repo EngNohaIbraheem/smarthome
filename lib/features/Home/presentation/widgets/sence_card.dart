@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/section_title.dart';
 import '../../../../core/widgets/sence_item.dart';
+import '../../../create_sence_screen/presentation/screens/create_sence_screen.dart';
+import '../../../sencess/screens/sence_screenn.dart';
 
 
 class SceneCard extends StatefulWidget {
@@ -23,8 +25,10 @@ class _SceneCardState extends State<SceneCard> {
           title: "Scenes",
           buttonText: "Add Scene",
           onPressed: () {
-            // Navigate to Scene Screen
-            // Navigator.push(...)
+            Navigator.pushNamed(
+              context,
+              ScenesyScreenn.routeName,
+            );
           },
         ),
 

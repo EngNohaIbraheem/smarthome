@@ -1,37 +1,55 @@
 import 'package:flutter/material.dart';
 
-class SocialButton extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  final VoidCallback onPressed;
+import '../../../../../core/widgets/social_icon.dart';
 
-  const SocialButton({
-    super.key,
-    required this.title,
-    required this.icon,
-    required this.onPressed,
-  });
+class SocialButtons extends StatelessWidget {
+  const SocialButtons({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton.icon(
-      onPressed: onPressed,
-      icon: Icon(icon),
-      label: Text(title),
-    );
-  }
-}
-class SocialIcon extends StatelessWidget {
-  final IconData icon;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SocialIcon(
 
-  const SocialIcon({super.key, required this.icon});
+          image: 'assets/images/google.png',
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (_) => const AppleLoginScreen(),
+            //   ),
+            // );
+          },
+        ),
 
-  @override
-  Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 25,
-      backgroundColor: Colors.grey.shade200,
-      child: Icon(icon, size: 28, color: Colors.black),
+
+        const SizedBox(width: 16),
+        SocialIcon(
+                 image: 'assets/images/apple.png',
+
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (_) => const AppleLoginScreen(),
+            //   ),
+            // );
+          },
+        ),
+        const SizedBox(width: 16),
+        SocialIcon(
+          image: 'assets/images/facebook.png',
+          onTap: () {
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //     builder: (_) => const AppleLoginScreen(),
+            //   ),
+            // );
+          },
+        ),
+      ],
     );
   }
 }

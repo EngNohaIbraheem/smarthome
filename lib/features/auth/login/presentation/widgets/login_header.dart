@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../Signup/presentation/widgets/signup_logo.dart';
+
 class LoginHeader extends StatelessWidget {
   const LoginHeader({super.key});
 
@@ -8,6 +10,8 @@ class LoginHeader extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SignupLogo(),
+
         Text(
           'Log into',
           style: TextStyle(fontSize: 28,

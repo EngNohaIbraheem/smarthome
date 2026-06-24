@@ -8,6 +8,7 @@ import '../widgets/sence_name_field.dart';
 
 class CreateSceneScreen extends StatelessWidget {
   const CreateSceneScreen({super.key});
+  static const String routeName = "CreateSceneScreen";
 
   @override
   Widget build(BuildContext context) {

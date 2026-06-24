@@ -8,6 +8,6 @@ class RoomModel {
     required this.image,
     required this.title,
     required this.devices,
-    this.isOn = false,
+    this.isOn = false, required String name,
   });
 }

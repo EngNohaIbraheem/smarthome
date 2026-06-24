@@ -5,7 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/widgets/custom_text_field.dart';
 import '../../../../../core/widgets/primary_button.dart';
+import '../../../../Home/presentation/screens/home_screen.dart';
+import '../../../Signup/presentation/screens/signup_screen.dart';
 import '../manager/login_cubit.dart';
+import '../screens/login_screen.dart';
 
 
 
@@ -16,7 +19,9 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = context.read<LoginCubit>();
 
-    return Form(
+    return
+
+      Form(
       key: cubit.formKey,
       child: Column(
         children: [
@@ -26,21 +31,22 @@ class LoginForm extends StatelessWidget {
             hintText: 'Email',
             keyboardType: TextInputType.emailAddress,
             textInputAction: TextInputAction.next,
-            validator: (value) {
-              if (value == null || value.trim().isEmpty) {
-                return 'Please enter your email';
-              }
-
-              final emailRegex = RegExp(
-                r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
-              );
-
-              if (!emailRegex.hasMatch(value.trim())) {
-                return 'Please enter a valid email';
-              }
-
-              return null;
-            }, hint: '',
+            // validator: (value) {
+            //   if (value == null || value.trim().isEmpty) {
+            //     return 'Please enter your email';
+            //   }
+            //
+            //   final emailRegex = RegExp(
+            //     r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+            //   );
+            //
+            //   if (!emailRegex.hasMatch(value.trim())) {
+            //     return 'Please enter a valid email';
+            //   }
+            //
+            //   return null;
+            // },
+            hint: '',
           ),
 
           const SizedBox(height: 20),
@@ -65,17 +71,18 @@ class LoginForm extends StatelessWidget {
                   ),
                 ),
 
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter your password';
-                  }
-
-                  if (value.length < 6) {
-                    return 'Password must be at least 6 characters';
-                  }
-
-                  return null;
-                }, hint: '',
+                // validator: (value) {
+                //   if (value == null || value.isEmpty) {
+                //     return 'Please enter your password';
+                //   }
+                //
+                //   if (value.length < 6) {
+                //     return 'Password must be at least 6 characters';
+                //   }
+                //
+                //   return null;
+                // },
+                hint: '',
               );
             },
           ),
@@ -83,40 +90,44 @@ class LoginForm extends StatelessWidget {
           const SizedBox(height: 30),
 
           /// Login Button
-          BlocConsumer<LoginCubit, LoginState>(
-            listener: (context, state) {
-              if (state is LoginSuccess) {
-                // TODO Navigate to Home
-              }
-
-              if (state is LoginFailure) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(state.message),
-                  ),
-                );
-              }
-            },
-            builder: (context, state) {
-              return PrimaryButton(
-                title: 'LOGIN',
-                isLoading: state is LoginLoading,
-                onPressed: () {
-                  context.read<LoginCubit>().login();
-                }, text: '',
-              );
-            },
-          ),
+          // BlocConsumer<LoginCubit, LoginState>(
+          //   listener: (context, state) {
+          //     if (state is LoginSuccess) {
+          //       // TODO Navigate to Home
+          //     }
+          //
+          //     if (state is LoginFailure) {
+          //       ScaffoldMessenger.of(context).showSnackBar(
+          //         SnackBar(
+          //           content: Text(state.message),
+          //         ),
+          //       );
+          //     }
+          //   },
+          //   builder: (context, state) {
+          //     return PrimaryButton(
+          //       title: 'LOGIN',
+          //       isLoading: state is LoginLoading,
+          //       onPressed: () {
+          //         context.read<LoginCubit>().login();
+          //       }, text: '',
+          //     );
+          //   },
+          // ),
 
           const SizedBox(height: 14),
 
           /// Sign Up
           PrimaryButton(
-            title: 'SIGN UP',
+            title: 'Loginn ',
             backgroundColor: Colors.white,
             textColor: Colors.black,
             onPressed: () {
-              // TODO Navigate To Register Screen
+              Navigator.pushNamed(
+                context,
+                HomeScreen.routeName,
+              );
+
             }, text: '',
           ),
         ],

@@ -17,7 +17,7 @@ class ProfileHeader extends StatelessWidget {
         const Spacer(),
 
         const Text(
-          "Sarah",
+          "Noha",
           style: TextStyle(
             color: Colors.white,
             fontSize: 26,

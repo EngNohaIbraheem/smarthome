@@ -2,20 +2,28 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SocialIcon extends StatelessWidget {
-  final IconData icon;
+  final String image;
+  final VoidCallback onTap;
+  final double size;
 
-  const SocialIcon({super.key, required this.icon});
+  const SocialIcon({
+    super.key,
+    required this.image,
+    required this.onTap,
+    this.size = 60, // 👈 default big size
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 48,
-      height: 48,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(color: Colors.grey.shade300),
+    return InkWell(
+      borderRadius: BorderRadius.circular(size),
+      onTap: onTap,
+      child: Image.asset(
+        image,
+        width: size,
+        height: size,
+        fit: BoxFit.contain,
       ),
-      child: Icon(icon, size: 28),
     );
   }
 }

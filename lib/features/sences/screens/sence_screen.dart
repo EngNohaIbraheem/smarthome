@@ -4,8 +4,9 @@ import '../widgets/create_sence_button.dart';
 import '../widgets/sence_header.dart';
 import '../widgets/sence_list.dart';
 
-class SceneScreen extends StatelessWidget {
-  const SceneScreen({super.key});
+class CreateScene extends StatelessWidget {
+  const CreateScene({super.key});
+  static const String routeName = "CreateScene";
 
   @override
   Widget build(BuildContext context) {

@@ -20,7 +20,7 @@ import '../widgets/guest_button.dart';
 import '../widgets/login_background.dart';
 import '../widgets/login_form.dart';
 import '../widgets/login_header.dart';
-import '../widgets/social_button.dart';
+import '../widgets/social_section.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -31,38 +31,37 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => LoginCubit(),
-      child: Scaffold(
+      child: const Scaffold(
         resizeToAvoidBottomInset: true,
         body: LoginBackground(
           child: SafeArea(
             child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
+              physics: BouncingScrollPhysics(),
               keyboardDismissBehavior:
               ScrollViewKeyboardDismissBehavior.onDrag,
               child: Padding(
-                padding: const EdgeInsets.symmetric(
+                padding: EdgeInsets.symmetric(
                   horizontal: 24,
                   vertical: 20,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const LoginHeader(),
+                    LoginHeader(),
 
-                    const SizedBox(height: 30),
+                    SizedBox(height: 30),
 
-                    const LoginForm(),
+                    LoginForm(),
 
-                    const SizedBox(height: 30),
+                    SizedBox(height: 30),
 
-                    const      SocialButtons(),
+                    SocialSection(),
 
+                    SizedBox(height: 35),
 
-                    const SizedBox(height: 35),
+                    GuestButton(),
 
-                    GuestButton(title: '', onPressed: () {  },),
-
-                    const SizedBox(height: 20),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),

@@ -2,20 +2,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../features/Home/presentation/screens/home_screen.dart';
-import '../../../features/Rooms/screens/room_screen.dart';
 import '../../../features/address/screens/delivert_adress_screen.dart';
-import '../../../features/auth/Signup/presentation/screens/signup_screen.dart';
 import '../../../features/auth/change_password/presentation/screens/change_password.dart';
 
 import '../../../features/auth/login/presentation/screens/login_screen.dart';
-import '../../../features/create_sence_screen/presentation/screens/create_sence_screen.dart';
 import '../../../features/onboarding/presentation/onboarding_scrren.dart';
 
-import '../../../features/sences/screens/sence_screen.dart';
-import '../../../features/sences/widgets/create_sence_button.dart';
-import '../../../features/sencess/screens/schedual_buttom_sheet.dart';
-import '../../../features/sencess/screens/sence_screenn.dart';
 import '../../../features/setting/screens/setting_profile.dart';
 import '../../../features/voucher/screens/voucher_screen.dart';
 import '../../../features/welcome/screens/welcome_screen.dart';
@@ -27,26 +19,26 @@ abstract class AppRouter {
         return MaterialPageRoute(builder: (c) => const WelcomeScreen());
       case OnboardingScreen.routeName:
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
-     case SignupScreen.routeName:
-       return MaterialPageRoute(builder: (_) => const SignupScreen());
-     case HomeScreen.routeName:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+     // case MainLayout.routeName:
+      //  return MaterialPageRoute(builder: (_) => const MainLayout());
+    //  case SignUpScreen.routeName:
+       // return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case LoginScreen.routeName:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case ChangePasswordScreen.routeName:
         return MaterialPageRoute(builder: (_) => const ChangePasswordScreen());
-      case RoomsScreen.routeName:
-       return MaterialPageRoute(builder: (_) => const RoomsScreen());
-      case CreateSceneScreen.routeName:
-        return MaterialPageRoute(
-           builder: (_) => const CreateSceneScreen());
-        case CreateScene.routeName:
-          return MaterialPageRoute(builder: (_) => const CreateScene());
-      case ScenesyScreenn.routeName:
-        return MaterialPageRoute(
-          builder: (_) => const ScenesyScreenn());
-       case ScheduleBottomSheet.routeName:
-        return MaterialPageRoute(builder: (_) => const ScheduleBottomSheet());
+     // case ForgotPasswordScreen.routeName:
+     //   return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
+      //case VerificationCodeScreen.routeName:
+       // return MaterialPageRoute(
+          //  builder: (_) => const VerificationCodeScreen());
+      //case SearchScreen.routeName:
+        //return MaterialPageRoute(builder: (_) => const SearchScreen());
+      // case CreateNewPasswordScreen.routeName:
+      //   return MaterialPageRoute(
+      //       builder: (_) => const CreateNewPasswordScreen());
+      // case SettingScreen.routeName:
+        return MaterialPageRoute(builder: (_) => const SettingScreen());
    // SettingScreen   case NotificationScreen.routeName:
    //      return MaterialPageRoute(builder: (_) => const NotificationScreen());
    //    case AddNewCardScreen.routeName:

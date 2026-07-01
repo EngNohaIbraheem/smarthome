@@ -20,7 +20,10 @@ class LoginHeader extends StatelessWidget {
         ),
         Text(
           'your account',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 28,
+              color: Colors.white,
+
+              fontWeight: FontWeight.bold),
         ),
       ],
     );

@@ -1,10 +1,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:smarthome/features/auth/Signup/presentation/widgets/signup_logo.dart';
 
 import '../../../features/Home/presentation/screens/home_screen.dart';
 import '../../../features/Rooms/screens/room_screen.dart';
 import '../../../features/address/screens/delivert_adress_screen.dart';
+import '../../../features/auth/Signup/presentation/screens/signup_screen.dart';
 import '../../../features/auth/change_password/presentation/screens/change_password.dart';
 
 import '../../../features/auth/login/presentation/screens/login_screen.dart';
@@ -31,9 +33,9 @@ abstract class AppRouter {
         return MaterialPageRoute(builder: (_) => const ChangePasswordScreen());
         case RoomsScreen.routeName:
        return MaterialPageRoute(builder: (_) => const RoomsScreen());
-      //case VerificationCodeScreen.routeName:
-       // return MaterialPageRoute(
-          //  builder: (_) => const VerificationCodeScreen());
+       case SignupScreen.routeName:
+       return MaterialPageRoute(
+           builder: (_) => const SignupScreen());
       //case SearchScreen.routeName:
         //return MaterialPageRoute(builder: (_) => const SearchScreen());
       // case CreateNewPasswordScreen.routeName:

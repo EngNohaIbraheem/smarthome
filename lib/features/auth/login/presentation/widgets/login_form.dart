@@ -56,7 +56,8 @@ class LoginForm extends StatelessWidget {
             buildWhen: (previous, current) =>
             current is PasswordVisibilityChanged,
             builder: (context, state) {
-              return CustomTextField(
+              return
+                CustomTextField(
                 controller: cubit.passwordController,
                 hintText: 'Password',
                 obscureText: cubit.isPasswordHidden,
@@ -71,17 +72,7 @@ class LoginForm extends StatelessWidget {
                   ),
                 ),
 
-                // validator: (value) {
-                //   if (value == null || value.isEmpty) {
-                //     return 'Please enter your password';
-                //   }
-                //
-                //   if (value.length < 6) {
-                //     return 'Password must be at least 6 characters';
-                //   }
-                //
-                //   return null;
-                // },
+
                 hint: '',
               );
             },
@@ -130,6 +121,8 @@ class LoginForm extends StatelessWidget {
 
             }, text: '',
           ),
+          const SizedBox(height: 14),
+
           PrimaryButton(
             title: 'Signup',
             backgroundColor: Colors.white,

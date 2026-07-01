@@ -29,8 +29,8 @@ class SocialSection extends StatelessWidget {
         const SizedBox(height: 16),
 
         SocialButton(
-          title: 'Sign Up with Apple',
-          icon: AppAssets.facebookImage,
+          title: 'Sign Up with Google',
+          icon: AppAssets.googleImage,
           onPressed: () {
             // TODO Apple Login
           }, imagePath: '',

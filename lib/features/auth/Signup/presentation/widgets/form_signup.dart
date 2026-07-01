@@ -4,7 +4,10 @@ import '../../../../../core/widgets/custom_text_field.dart';
 import '../../../../../core/widgets/primary_button.dart';
 import '../../../../../core/widgets/social_button.dart';
 
+import '../../../../Home/presentation/screens/home_screen.dart';
 import '../../../login/presentation/widgets/guest_button.dart';
+import '../../../login/presentation/widgets/social_section.dart';
+import '../screens/signup_screen.dart';
 import 'header_signup.dart';
 import 'signup_logo.dart';
 
@@ -18,38 +21,72 @@ class SignupForm extends StatelessWidget {
         horizontal: 24,
         vertical: 16,
       ),
-
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-
         children: [
-
           const SignupLogo(),
-
           const SizedBox(height: 35),
-
           const SignupHeader(),
-
           const SizedBox(height: 30),
-
           CustomTextField(
-            hint: "Name",
+            //  controller: cubit.emailController,
+            hintText: 'Name',
+            keyboardType: TextInputType.emailAddress,
+            textInputAction: TextInputAction.next,
+            // validator: (value) {
+            //   if (value == null || value.trim().isEmpty) {
+            //     return 'Please enter your email';
+            //   }
+            //
+            //   final emailRegex = RegExp(
+            //     r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+            //   );
+            //
+            //   if (!emailRegex.hasMatch(value.trim())) {
+            //     return 'Please enter a valid email';
+            //   }
+            //
+            //   return null;
+            // },
+            hint: '',
           ),
-
           const SizedBox(height: 20),
-
           CustomTextField(
-            hint: "Email",
+            //controller: cubit.emailController,
+            hintText: 'Email',
+            keyboardType: TextInputType.emailAddress,
+            textInputAction: TextInputAction.next,
+            // validator: (value) {
+            //   if (value == null || value.trim().isEmpty) {
+            //     return 'Please enter your email';
+            //   }
+            //
+            //   final emailRegex = RegExp(
+            //     r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
+            //   );
+            //
+            //   if (!emailRegex.hasMatch(value.trim())) {
+            //     return 'Please enter a valid email';
+            //   }
+            //
+            //   return null;
+            // },
+            hint: '',
           ),
-
           const SizedBox(height: 20),
-
           CustomTextField(
-            hint: "Password",
+            hintText: 'Password',
+            obscureText: true,
+            textInputAction: TextInputAction.done,
+            suffixIcon: IconButton(
+              onPressed: () {
+                // أضف الكود هنا إذا أردت تنفيذ شيء عند الضغط
+              },
+              icon: const Icon(Icons.visibility),
+            ),
+            hint: '',
           ),
-
           const SizedBox(height: 24),
-
           Text(
             "By selecting Create Account below, I agree to Terms of Service & Privacy Policy",
             style: TextStyle(
@@ -57,66 +94,41 @@ class SignupForm extends StatelessWidget {
               height: 1.5,
             ),
           ),
-
           const SizedBox(height: 35),
-
           PrimaryButton(
-            text: "CREATE ACCOUNT",
-            onPressed: () {}, title: '',
+            title: 'Loginn ',
+            backgroundColor: Colors.white,
+            textColor: Colors.black,
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                HomeScreen.routeName,
+              );
+            },
+            text: '',
           ),
-
-          const SizedBox(height: 18),
-
+          const SizedBox(height: 24),
           PrimaryButton(
-            text: "LOGIN",
-            onPressed: () {}, title: '',
+            title: 'Signup',
+            backgroundColor: Colors.white,
+            textColor: Colors.black,
+            onPressed: () {
+              Navigator.pushNamed(
+                context,
+                SignupScreen.routeName,
+              );
+            },
+            text: '',
           ),
-
-          const SizedBox(height: 30),
-
-          Row(
-            children: [
-
-              const Expanded(child: Divider(color: Colors.white54)),
-
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 18),
-                child: Text(
-                  "OR",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                  ),
-                ),
-              ),
-
-              const Expanded(child: Divider(color: Colors.white54)),
-            ],
-          ),
-
-          const SizedBox(height: 28),
-
-          SocialButton(
-            title: "Sign Up with Google",
-            icon: "assets/icons/google.png",
-            onPressed: () {}, imagePath: '',
-          ),
-
           const SizedBox(height: 18),
-
-          SocialButton(
-            title: "Sign Up with Apple",
-            icon: "assets/icons/apple.png",
-            onPressed: () {}, imagePath: '',
-          ),
-
+          const SocialSection(),
+          const SizedBox(height: 18),
+          const SocialSection(),
           const SizedBox(height: 40),
-
           GuestButton(
             title: "CONTINUE AS A GUEST",
             onPressed: () {},
           ),
-
           const SizedBox(height: 30),
         ],
       ),

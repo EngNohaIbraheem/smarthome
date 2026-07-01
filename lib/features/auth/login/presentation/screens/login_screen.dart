@@ -31,37 +31,37 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => LoginCubit(),
-      child: const Scaffold(
+      child: Scaffold(
         resizeToAvoidBottomInset: true,
         body: LoginBackground(
           child: SafeArea(
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               keyboardDismissBehavior:
               ScrollViewKeyboardDismissBehavior.onDrag,
               child: Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 24,
                   vertical: 20,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    LoginHeader(),
+                    const LoginHeader(),
 
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
 
-                    LoginForm(),
+                    const LoginForm(),
 
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
 
-                    SocialSection(),
+                    const SocialSection(),
 
-                    SizedBox(height: 35),
+                    const SizedBox(height: 35),
 
-                    GuestButton(),
+                    GuestButton(title: '', onPressed: () {  },),
 
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),

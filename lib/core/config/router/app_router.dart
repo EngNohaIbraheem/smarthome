@@ -2,6 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../features/Home/presentation/screens/home_screen.dart';
+import '../../../features/Rooms/screens/room_screen.dart';
 import '../../../features/address/screens/delivert_adress_screen.dart';
 import '../../../features/auth/change_password/presentation/screens/change_password.dart';
 
@@ -19,16 +21,16 @@ abstract class AppRouter {
         return MaterialPageRoute(builder: (c) => const WelcomeScreen());
       case OnboardingScreen.routeName:
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
-     // case MainLayout.routeName:
-      //  return MaterialPageRoute(builder: (_) => const MainLayout());
+     case HomeScreen.routeName:
+       return MaterialPageRoute(builder: (_) => const HomeScreen());
     //  case SignUpScreen.routeName:
        // return MaterialPageRoute(builder: (_) => const SignUpScreen());
       case LoginScreen.routeName:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case ChangePasswordScreen.routeName:
         return MaterialPageRoute(builder: (_) => const ChangePasswordScreen());
-     // case ForgotPasswordScreen.routeName:
-     //   return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
+        case RoomsScreen.routeName:
+       return MaterialPageRoute(builder: (_) => const RoomsScreen());
       //case VerificationCodeScreen.routeName:
        // return MaterialPageRoute(
           //  builder: (_) => const VerificationCodeScreen());

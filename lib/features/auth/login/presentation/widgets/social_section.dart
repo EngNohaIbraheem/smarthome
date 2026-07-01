@@ -24,8 +24,18 @@ class SocialSection extends StatelessWidget {
           icon: AppAssets.facebookImage,
           onPressed: () {
             // TODO Apple Login
-          },
+          }, imagePath: '',
         ),
+        const SizedBox(height: 16),
+
+        SocialButton(
+          title: 'Sign Up with Apple',
+          icon: AppAssets.facebookImage,
+          onPressed: () {
+            // TODO Apple Login
+          }, imagePath: '',
+        ),
+
       ],
     );
   }

@@ -130,6 +130,18 @@ class LoginForm extends StatelessWidget {
 
             }, text: '',
           ),
+          PrimaryButton(
+            title: 'Signup',
+            backgroundColor: Colors.white,
+            textColor: Colors.black,
+            onPressed: () {
+              Navigator.pushNamed(
+                context, SignupScreen.routeName,
+              );
+
+            }, text: '',
+          ),
+
         ],
       ),
     );

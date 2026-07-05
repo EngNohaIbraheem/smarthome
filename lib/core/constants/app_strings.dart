@@ -3,6 +3,8 @@ class AppStrings{
  // static const String signup = "  Sing up";
 
 
+  static const String myAccount = 'My Account';
+  static const String general = 'general';
 
   static const signIn = "SIGN IN";
 
